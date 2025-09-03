@@ -9,7 +9,7 @@ type TProps = ThreeElements["group"];
 const HackerRoom = (props: TProps) => {
   const meshRef = useRef<Mesh>(null!);
 
-  const { nodes, materials } = useGLTF("/models/hacker-room.glb");
+  const { nodes, materials } = useGLTF("models/hacker-room.glb");
 
   const monitortxt = useTexture("textures/desk/monitor.png");
   const screenTxt = useTexture("textures/desk/screen.png");
@@ -82,6 +82,6 @@ const HackerRoom = (props: TProps) => {
   );
 };
 
-useGLTF.preload("/models/hacker-room.glb");
+useGLTF.preload("models/hacker-room.glb");
 
 export default HackerRoom;
